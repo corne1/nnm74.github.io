@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php @$counter = $_COOKIE["counter"];
+if (!isset($counter))
+{
+	$counter = 0;
+}
+$counter++;
+setcookie("counter", $counter, 0x7FFFFFFF)
+?>
 <html lang="en">
 <head>
 	  <!-- Важная техническая информация для браузера -->
@@ -110,6 +118,11 @@
 				<!-- /.footer-cta-block -->
 			</div>
 			<!-- /.col-4 -->
+			<div class="col-md-1">
+				<div class="counter">
+					<a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=https://nnm74.github.io&digit=style/plain/30/&reloads=0" alt="free hit counter html code" title="free hit counter html code" border="0"></a><br /><a href="http://www.reliablecounter.com" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;">Счетчик посещений</a>
+				 </div>
+			</div>
 		</div>
 		<!-- /.row -->
 	</div>
@@ -119,5 +132,6 @@
 <script>
 	new WOW().init();
 </script>
+
 </body>
 </html>
